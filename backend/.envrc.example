@@ -1,0 +1,9 @@
+#!/bin/bash
+
+export DATABASE_URL=""
+export TOKEN=""
+
+# Tidak perlu diubah
+export GOOSE_DRIVER=postgres
+export GOOSE_DBSTRING=$DATABASE_URL
+export GOOSE_MIGRATION_DIR=./backend/internal/db/migrations

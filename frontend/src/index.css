@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+    themes: "night" --default;
+}
+
+@plugin "daisyui/theme" {
+    name: "night";
+    default: true;
+
+    --color-base-100: #13191f;
+    --color-base-200: #151b1f;
+    --radius-field: 0.2rem;
+    --radius-box: 0.2rem;
+}
+
+@layer base {
+    html,
+    body,
+    main,
+    #root,
+    .size-full {
+        @apply h-full w-full;
+    }
+
+    #root {
+        @apply flex flex-col;
+    }
+}
