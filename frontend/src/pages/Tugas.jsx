@@ -31,7 +31,7 @@ export default function Tugas() {
                 <div class="flex flex-col gap-2 ">
                     <div class="flex flex-col md:flex-row md:gap-2 mb-4">
                         <A
-                            href="tambah"
+                            href="/tugas/tambah"
                             class="btn btn-outline btn-primary rounded-none mt-4 md:w-max"
                         >
                             <span>
@@ -41,7 +41,7 @@ export default function Tugas() {
                         </A>
                         <span class="grow"></span>
                         <A
-                            href="lama"
+                            href="/tugas/lama"
                             class="btn btn-outline btn-secondary rounded-none mt-4 md:w-max"
                         >
                             <span>
@@ -80,7 +80,7 @@ export default function Tugas() {
                                     </div>
                                 </div>
                                 <A
-                                    href="edit"
+                                    href="/tugas/edit"
                                     state={t}
                                     class="btn rounded-none flex md:flex-col w-full md:w-auto md:py-8 mx-4"
                                 >
