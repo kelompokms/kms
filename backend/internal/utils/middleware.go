@@ -16,7 +16,7 @@ var JWTConfig = echojwt.Config{
 }
 
 var CORSConfig = middleware.CORSConfig{
-	AllowOrigins:     []string{"http://localhost:5173", "https://kms.maroisa.com", "http://localhost:3002", "http://192.168.8.143:5173"},
+	AllowOrigins:     []string{"http://localhost:5173", "https://kms.maroisa.com", "http://localhost:3004", "http://192.168.8.143:5173"},
 	AllowHeaders:     []string{"*"},
 	AllowMethods:     []string{"GET", "POST", "PUT"},
 	AllowCredentials: true,

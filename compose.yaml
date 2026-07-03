@@ -1,0 +1,17 @@
+services:
+  api:
+    build: backend
+    working_dir: /app
+    entrypoint: /app/kms-bin
+    env_file:
+      - path: .env
+        required: true
+    network_mode: host
+    restart: unless-stopped
+  web:
+    build: frontend
+    network_mode: host
+    env_file:
+      - path: .env
+        required: true
+    restart: unless-stopped
