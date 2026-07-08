@@ -6,12 +6,14 @@ services:
     env_file:
       - path: .env
         required: true
-    network_mode: host
     restart: unless-stopped
+    ports:
+      - 3002:3000
   web:
     build: frontend
-    network_mode: host
     env_file:
       - path: .env
         required: true
     restart: unless-stopped
+    ports:
+      - 3001:80
