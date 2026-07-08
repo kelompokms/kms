@@ -13,12 +13,10 @@ export default function Login() {
         setSubmitting(true);
         const [res, err] = await post("login", formData);
         if (err) {
-            console.log(err);
+            alert(err);
             setSubmitting(false);
             return;
         }
-
-        alert(res.statusText);
 
         navigate("/dashboard");
     }
