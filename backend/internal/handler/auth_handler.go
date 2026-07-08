@@ -46,11 +46,37 @@ func (s *Server) resetPassword(c *echo.Context) error {
 		return c.String(http.StatusInternalServerError, "gagal mengenkripsi password")
 	}
 
-	s.db.UpdatePassword(c.Request().Context(), db.UpdatePasswordParams{
+	user, err := s.db.UpdatePassword(c.Request().Context(), db.UpdatePasswordParams{
 		NoUrut:       parsedNim.NoUrut,
 		Angkatan:     parsedNim.Angkatan,
 		Password:     pgtype.Text{String: string(hashedPassword), Valid: true},
 		TanggalLahir: pgtype.Date{Time: parsedTanggalLahir, Valid: true},
+	})
+
+	if err != nil {
+		return c.String(http.StatusInternalServerError, "gagal mengupdate password")
+	}
+
+	month := time.Now().Add(time.Hour * 24 * 30)
+
+	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
+		"user_id":  user.ID,
+		"angkatan": user.Angkatan,
+		"exp":      month.Unix(),
+	})
+
+	t, err := token.SignedString([]byte(utils.GetSecret()))
+	if err != nil {
+		return c.String(500, err.Error())
+	}
+
+	c.SetCookie(&http.Cookie{
+		Name:     "token",
+		Value:    t,
+		HttpOnly: true,
+		SameSite: http.SameSiteLaxMode,
+		Expires:  month,
+		Path:     "/",
 	})
 
 	return c.JSON(http.StatusOK, map[string]interface{}{

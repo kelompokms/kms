@@ -205,8 +205,11 @@ func (q *Queries) ListTugasLama(ctx context.Context) ([]Tuga, error) {
 	return items, nil
 }
 
-const updatePassword = `-- name: UpdatePassword :exec
+const updatePassword = `-- name: UpdatePassword :one
 update ptik set password = $1 where no_urut = $2 and angkatan = $3 and tanggal_lahir = $4
+returning
+    id, CONCAT('K35', RIGHT(angkatan::text, 2), LPAD(no_urut::text, 3, '0')) as nim,
+    nama, tempat_lahir, tanggal_lahir, angkatan, pfp
 `
 
 type UpdatePasswordParams struct {
@@ -216,14 +219,34 @@ type UpdatePasswordParams struct {
 	TanggalLahir pgtype.Date
 }
 
-func (q *Queries) UpdatePassword(ctx context.Context, arg UpdatePasswordParams) error {
-	_, err := q.db.Exec(ctx, updatePassword,
+type UpdatePasswordRow struct {
+	ID           int32
+	Nim          interface{}
+	Nama         string
+	TempatLahir  string
+	TanggalLahir pgtype.Date
+	Angkatan     int16
+	Pfp          pgtype.Text
+}
+
+func (q *Queries) UpdatePassword(ctx context.Context, arg UpdatePasswordParams) (UpdatePasswordRow, error) {
+	row := q.db.QueryRow(ctx, updatePassword,
 		arg.Password,
 		arg.NoUrut,
 		arg.Angkatan,
 		arg.TanggalLahir,
 	)
-	return err
+	var i UpdatePasswordRow
+	err := row.Scan(
+		&i.ID,
+		&i.Nim,
+		&i.Nama,
+		&i.TempatLahir,
+		&i.TanggalLahir,
+		&i.Angkatan,
+		&i.Pfp,
+	)
+	return i, err
 }
 
 const updateTugas = `-- name: UpdateTugas :exec

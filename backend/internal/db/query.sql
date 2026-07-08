@@ -1,8 +1,11 @@
 -- name: ListPTIK :many
 select id, CONCAT('K35', RIGHT(angkatan::text, 2), LPAD(no_urut::text, 3, '0')) as nim, nama, tempat_lahir, tanggal_lahir, angkatan from ptik where angkatan = $1 order by no_urut;
 
--- name: UpdatePassword :exec
-update ptik set password = $1 where no_urut = $2 and angkatan = $3 and tanggal_lahir = $4;
+-- name: UpdatePassword :one
+update ptik set password = $1 where no_urut = $2 and angkatan = $3 and tanggal_lahir = $4
+returning
+    id, CONCAT('K35', RIGHT(angkatan::text, 2), LPAD(no_urut::text, 3, '0')) as nim,
+    nama, tempat_lahir, tanggal_lahir, angkatan, pfp;
 
 -- name: CheckUser :one
 select id, angkatan, password from ptik where no_urut = $1 and angkatan = $2;

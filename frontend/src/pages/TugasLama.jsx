@@ -42,7 +42,7 @@ export default function Tugas() {
                     </div>
                     <For each={tugas()}>
                         {(t) => (
-                            <div class="border border-white/10 bg-base-200/20 flex flex-col md:flex-row items-center">
+                            <div class="border border-white/10 bg-base-200 flex flex-col md:flex-row items-center">
                                 <div class="flex flex-col gap-2 grow p-4 w-full">
                                     <div>
                                         <h2 class="font-bold text-lg">
