@@ -2,9 +2,7 @@ import "./KMS.css";
 
 export default function KMS(props) {
     return (
-        <div
-            class={`relative flex justify-center items-center pl-8 ${props.class}`}
-        >
+        <div class={`relative flex justify-center items-center ${props.class}`}>
             <svg
                 width="32"
                 height="128"

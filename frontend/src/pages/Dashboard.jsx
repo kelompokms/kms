@@ -17,7 +17,9 @@ export default function Dashboard() {
 
     return (
         <main class="overflow-auto">
-            <KMS class="h-1/3 bg-black/50 border-b-2 border-primary"></KMS>
+            <div class="h-1/3 bg-black/50 border-b-2 border-primary">
+                <KMS class="h-full p-20 pl-24" />
+            </div>
             <div class="grid grid-cols-2 gap-4 p-4 max-w-2xl mx-auto mt-4">
                 <For each={dashboardItem}>
                     {(item) => (
