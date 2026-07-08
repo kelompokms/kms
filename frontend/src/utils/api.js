@@ -19,7 +19,7 @@ export async function get(...segments) {
     }
     if (res && !res.ok) {
         const text = await res.text();
-        return [null, res.statusText];
+        return [null, text];
     }
 
     const json = await res.json();
