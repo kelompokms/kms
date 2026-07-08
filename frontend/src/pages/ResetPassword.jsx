@@ -18,8 +18,6 @@ export default function Login() {
             return;
         }
 
-        alert(res.message);
-
         navigate("/dashboard");
     }
 

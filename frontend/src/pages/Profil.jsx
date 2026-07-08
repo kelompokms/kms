@@ -1,11 +1,15 @@
 import { createSignal, onMount, Show } from "solid-js";
-import { get, getProfilePicturePath } from "../utils/api.js";
+import { useNavigate } from "@solidjs/router";
+
+import { get, getProfilePicturePath, post } from "../utils/api.js";
 import { formatDate } from "../utils/formatter.js";
 
 import Loading from "../components/Loading.jsx";
 import Wolf from "../assets/wolf.webp";
 
 export default function Profil() {
+    const navigate = useNavigate();
+
     const [loading, setLoading] = createSignal(true);
     const [profile, setProfile] = createSignal([]);
 
@@ -58,7 +62,13 @@ export default function Profil() {
                         </div>
                     </div>
                     <button
-                        onclick={() => togglePopupActive()}
+                        onclick={() => {
+                            const res = confirm("Yakin ingin logout?");
+                            if (res)
+                                post("/logout", null).then(([res, err]) => {
+                                    navigate("/login");
+                                });
+                        }}
                         class="btn text-error btn-ghost w-fit ml-auto mt-4"
                     >
                         Logout
