@@ -17,6 +17,8 @@ import TugasEdit from "./pages/TugasEdit.jsx";
 import TugasTambah from "./pages/TugasTambah.jsx";
 import Profil from "./pages/Profil.jsx";
 import Jadwal from "./pages/Jadwal.jsx";
+import ServiceUnavailable from "./pages/ServiceUnavailable.jsx";
+import GantiPfp from "./pages/GantiPfp.jsx";
 
 const root = document.getElementById("root");
 
@@ -32,11 +34,13 @@ render(
                 <Route path="/tugas/tambah" component={TugasTambah} />
                 <Route path="/tugas/edit" component={TugasEdit} />
                 <Route path="/profil" component={Profil} />
+                <Route path="/profil/ganti-pfp" component={GantiPfp} />
                 <Route path="/jadwal" component={Jadwal} />
             </Route>
             <Route path="/login" component={Login} />
             <Route path="/reset_password" component={ResetPassword} />
             <Route path="*404" component={NotFound} />
+            <Route path="/503" component={ServiceUnavailable} />
         </Router>
     ),
     root,

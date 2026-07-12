@@ -29,7 +29,7 @@ func (s *Server) Routes() {
 
 	// user_handler.go
 	protected.GET("/user", s.getUser)
-	protected.PATCH("/user", s.changeProfilePicture)
+	protected.POST("/user/change-pfp", s.changeProfilePicture)
 
 	// tugas_handler.go
 	protected.GET("/tugas", s.getTugas)

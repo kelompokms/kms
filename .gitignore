@@ -9,7 +9,7 @@ dump.sql
 main
 kms
 kms-bin
-
+uploads/
 # Test binary, built with `go test -c`
 *.test
 

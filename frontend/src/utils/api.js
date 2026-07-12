@@ -15,6 +15,9 @@ export async function get(...segments) {
         .catch((err) => [null, err]);
 
     if (err) {
+        if (err instanceof TypeError) {
+            return [null, "503"];
+        }
         return [null, err];
     }
     if (res && !res.ok) {

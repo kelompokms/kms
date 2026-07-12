@@ -36,7 +36,10 @@ export default function PTIK() {
                                 <tr>
                                     <th>NIM</th>
                                     <th>Nama</th>
-                                    <th>Tempat, Tanggal Lahir</th>
+                                    <th class="flex flex-col md:flex-row">
+                                        <span>Tempat, </span>
+                                        <span>Tanggal Lahir</span>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>

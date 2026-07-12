@@ -1,10 +1,11 @@
 import { createSignal, onMount, Show } from "solid-js";
-import { useNavigate } from "@solidjs/router";
+import { A, useNavigate } from "@solidjs/router";
 
 import { get, getProfilePicturePath, post } from "../utils/api.js";
 import { formatDate } from "../utils/formatter.js";
 
 import Loading from "../components/Loading.jsx";
+import Pencil from "../components/icons/Pencil.jsx";
 import Wolf from "../assets/wolf.webp";
 
 export default function Profil() {
@@ -30,14 +31,25 @@ export default function Profil() {
             <Show when={!loading()} fallback={Loading}>
                 <div class="grow">
                     <div class="w-full flex justify-center items-center py-10">
-                        <img
-                            src={
-                                profile().Profil
-                                    ? getProfilePicturePath(profile().Profil)
-                                    : Wolf
-                            }
-                            class="rounded-full aspect-square bg-center size-40"
-                        ></img>
+                        <div class="rounded-full aspect-square bg-center size-40 relative">
+                            <A
+                                href="/profil/ganti-pfp"
+                                draggable="false"
+                                class="btn rounded-full btn-ghost absolute left-0 top-0 w-full h-full opacity-0 hover:bg-black/50 hover:opacity-100"
+                            >
+                                <Pencil class="size-6" />
+                            </A>
+                            <img
+                                src={
+                                    profile().Profil
+                                        ? getProfilePicturePath(
+                                              profile().Profil,
+                                          )
+                                        : Wolf
+                                }
+                                class="h-full w-full rounded-full"
+                            ></img>
+                        </div>
                     </div>
                     <div class="flex flex-col justify-center grow">
                         <div class="flex bg-base-200 p-4 border border-neutral first:rounded-t-lg last:rounded-b-lg">

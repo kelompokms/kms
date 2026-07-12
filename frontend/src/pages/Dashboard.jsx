@@ -27,6 +27,7 @@ export default function Dashboard() {
                             class="p-4 border-2 btn btn-primary btn-outline aspect-video w-full h-full flex flex-col gap-2"
                             state={{ name: item.name }}
                             href={item.path}
+                            draggable="false"
                         >
                             {item.icon}
                             <p class="font-bold text-center md:text-lg">
