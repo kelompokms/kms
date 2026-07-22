@@ -1,6 +1,5 @@
-FROM node:24-alpine AS builder
-
-RUN corepack enable pnpm
+FROM ghcr.io/pnpm/pnpm:11 AS builder
+RUN pnpm runtime set node 24 -g
 
 WORKDIR /app
 
