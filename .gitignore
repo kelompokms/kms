@@ -1,5 +1,3 @@
-dump.sql
-
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -7,6 +5,9 @@ dump.sql
 *.so
 *.dylib
 main
+dump.sql
+kms.tar.gz
+kms.zip
 kms
 kms-bin
 uploads/

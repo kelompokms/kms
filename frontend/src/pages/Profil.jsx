@@ -41,10 +41,8 @@ export default function Profil() {
                             </A>
                             <img
                                 src={
-                                    profile().Profil
-                                        ? getProfilePicturePath(
-                                              profile().Profil,
-                                          )
+                                    profile().Pfp
+                                        ? getProfilePicturePath(profile().Pfp)
                                         : Wolf
                                 }
                                 class="h-full w-full rounded-full"

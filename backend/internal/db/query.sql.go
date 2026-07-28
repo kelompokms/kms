@@ -249,6 +249,20 @@ func (q *Queries) UpdatePassword(ctx context.Context, arg UpdatePasswordParams) 
 	return i, err
 }
 
+const updatePfp = `-- name: UpdatePfp :exec
+update ptik set pfp = $1 where id = $2
+`
+
+type UpdatePfpParams struct {
+	Pfp pgtype.Text
+	ID  int32
+}
+
+func (q *Queries) UpdatePfp(ctx context.Context, arg UpdatePfpParams) error {
+	_, err := q.db.Exec(ctx, updatePfp, arg.Pfp, arg.ID)
+	return err
+}
+
 const updateTugas = `-- name: UpdateTugas :exec
 update tugas set nama = $2, matkul = $3, deskripsi = $4, deadline = $5, link = $6 where id = $1
 `

@@ -13,6 +13,9 @@ select id, angkatan, password from ptik where no_urut = $1 and angkatan = $2;
 -- name: GetUser :one
 select id, CONCAT('K35', RIGHT(angkatan::text, 2), LPAD(no_urut::text, 3, '0')) as nim, nama, tempat_lahir, tanggal_lahir, angkatan, pfp from ptik where id = $1;
 
+-- name: UpdatePfp :exec
+update ptik set pfp = $1 where id = $2;
+
 -- name: ListTugas :many
 select * from tugas where deadline >= CURRENT_DATE ORDER BY deadline;
 

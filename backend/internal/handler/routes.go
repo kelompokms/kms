@@ -36,4 +36,6 @@ func (s *Server) Routes() {
 	protected.GET("/tugas/lama", s.getTugasLama)
 	protected.POST("/tugas", s.postTugas)
 	protected.PUT("/tugas", s.putTugas)
+
+	protected.Static("/uploads", "uploads")
 }

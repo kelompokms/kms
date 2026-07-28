@@ -4,7 +4,9 @@ const host = import.meta.env.VITE_API_HOST
 
 const URL = window.location.protocol + "//" + host + "/";
 
-export const getProfilePicturePath = (path) => URL + "public" + "/pfp/" + path;
+export const getProfilePicturePath = (path) => {
+    return URL + "uploads/" + path;
+};
 
 export async function get(...segments) {
     const [res, err] = await fetch(URL + segments.join("/"), {

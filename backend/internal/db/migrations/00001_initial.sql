@@ -7,7 +7,7 @@ CREATE TABLE ptik (
     tanggal_lahir DATE NOT NULL,
     angkatan SMALLINT NOT NULL,
     password VARCHAR(128),
-    pfp VARCHAR(16)
+    pfp TEXT
 );
 
 CREATE TABLE tugas (

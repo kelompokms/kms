@@ -2,12 +2,14 @@ package handler
 
 import (
 	"io"
+	"kms/internal/db"
 	"log"
 	"net/http"
 	"os"
 	"path/filepath"
 
 	"github.com/golang-jwt/jwt/v5"
+	"github.com/jackc/pgx/v5/pgtype"
 	"github.com/labstack/echo/v5"
 )
 
@@ -31,6 +33,15 @@ func (s *Server) getUser(c *echo.Context) error {
 }
 
 func (s *Server) changeProfilePicture(c *echo.Context) error {
+	token, err := echo.ContextGet[*jwt.Token](c, "user")
+	if err != nil {
+		log.Println(err)
+		return echo.ErrUnauthorized
+	}
+
+	claims := token.Claims.(jwt.MapClaims)
+	userID := claims["user_id"].(float64)
+
 	file, err := c.FormFile("pfp")
 	if err != nil {
 		log.Println(err)
@@ -58,6 +69,16 @@ func (s *Server) changeProfilePicture(c *echo.Context) error {
 	if _, err = io.Copy(dst, src); err != nil {
 		log.Println(err)
 		return err
+	}
+
+	err = s.db.UpdatePfp(c.Request().Context(), db.UpdatePfpParams{
+		Pfp: pgtype.Text{String: file.Filename, Valid: true},
+		ID:  int32(userID),
+	})
+
+	if err != nil {
+		log.Println(err)
+		return c.String(http.StatusInternalServerError, "Gagal mengupdate profile.")
 	}
 
 	return c.JSON(http.StatusOK, map[string]interface{}{
