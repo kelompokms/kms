@@ -1,0 +1,482 @@
+{
+    "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"],
+    "keys": [
+        "No",
+        "Hari",
+        "Sesi",
+        "Jam",
+        "Mata Kuliah",
+        "Kode Matkul",
+        "SKS",
+        "Dosen",
+        "Ruang"
+    ],
+    "values": {
+        "A": [
+            [
+                "1",
+                "0",
+                "1",
+                "07:30:00 - 08:20:00",
+                "Teknik Animasi 3D ",
+                "02143243033",
+                "3",
+                "Yusfia Hafid Aristyagama",
+                "Lab Komputer PTIK"
+            ],
+            [
+                "2",
+                "0",
+                "2",
+                "08:25:00 - 09:15:00",
+                "Teknik Animasi 3D ",
+                "02143243033",
+                "3",
+                "Yusfia Hafid Aristyagama",
+                "Lab Komputer PTIK"
+            ],
+            [
+                "3",
+                "0",
+                "3",
+                "09:20:00 - 10:10:00",
+                "Teknik Animasi 3D ",
+                "02143243033",
+                "3",
+                "Yusfia Hafid Aristyagama",
+                "Lab Komputer PTIK"
+            ],
+            [
+                "4",
+                "0",
+                "4",
+                "10:15:00 - 11:05:00",
+                "Organisasi Sistem Komputer ",
+                "02143243041",
+                "3",
+                "Yudianto Sujana",
+                "5B104"
+            ],
+            [
+                "5",
+                "0",
+                "5",
+                "11:10:00 - 12:00:00",
+                "Organisasi Sistem Komputer ",
+                "02143243041",
+                "3",
+                "Yudianto Sujana",
+                "5B104"
+            ],
+            [
+                "6",
+                "0",
+                "6",
+                "13:00:00 - 13:50:00",
+                "Organisasi Sistem Komputer ",
+                "02143243041",
+                "3",
+                "Yudianto Sujana",
+                "5B104"
+            ],
+            [
+                "7",
+                "0",
+                "7",
+                "13:55:00 - 14:45:00",
+                "Jaringan Nirkabel ",
+                "02143243035",
+                "3",
+                "Vearen Dika Sofirudin",
+                "Lab Komputer PTIK"
+            ],
+            [
+                "8",
+                "0",
+                "8",
+                "15:30:00 - 16:20:00",
+                "Jaringan Nirkabel ",
+                "02143243035",
+                "3",
+                "Vearen Dika Sofirudin",
+                "Lab Komputer PTIK"
+            ],
+            [
+                "9",
+                "0",
+                "9",
+                "16:25:00 - 17:15:00",
+                "Jaringan Nirkabel ",
+                "02143243035",
+                "3",
+                "Vearen Dika Sofirudin",
+                "Lab Komputer PTIK"
+            ],
+            [
+                "10",
+                "1",
+                "1",
+                "07:30:00 - 08:20:00",
+                "Rekayasa Perangkat Lunak ",
+                "02143243040",
+                "3",
+                "Slamet Kurniawan Fahrurozi",
+                "5B105"
+            ],
+            [
+                "11",
+                "1",
+                "2",
+                "08:25:00 - 09:15:00",
+                "Rekayasa Perangkat Lunak ",
+                "02143243040",
+                "3",
+                "Slamet Kurniawan Fahrurozi",
+                "5B105"
+            ],
+            [
+                "12",
+                "1",
+                "3",
+                "09:20:00 - 10:10:00",
+                "Rekayasa Perangkat Lunak ",
+                "02143243040",
+                "3",
+                "Slamet Kurniawan Fahrurozi",
+                "5B105"
+            ],
+            [
+                "13",
+                "1",
+                "6",
+                "13:00:00 - 13:50:00",
+                "Statistik Terapan ",
+                "02143243039",
+                "3",
+                "Agus Efendi",
+                "5B104"
+            ],
+            [
+                "14",
+                "1",
+                "7",
+                "13:55:00 - 14:45:00",
+                "Statistik Terapan ",
+                "02143243039",
+                "3",
+                "Agus Efendi",
+                "5B104"
+            ],
+            [
+                "15",
+                "1",
+                "8",
+                "15:30:00 - 16:20:00",
+                "Statistik Terapan ",
+                "02143243039",
+                "3",
+                "Agus Efendi",
+                "5B104"
+            ],
+            [
+                "16",
+                "2",
+                "3",
+                "09:20:00 - 10:10:00",
+                "Perkembangan Peserta Didik ",
+                "02143232005",
+                "2",
+                "Dwi Maryono",
+                "5B104"
+            ],
+            [
+                "17",
+                "2",
+                "4",
+                "10:15:00 - 11:05:00",
+                "Perkembangan Peserta Didik ",
+                "02143232005",
+                "2",
+                "Dwi Maryono",
+                "5B104"
+            ],
+            [
+                "18",
+                "2",
+                "6",
+                "13:00:00 - 13:50:00",
+                "Kewirausahaan ",
+                "02143222003",
+                "2",
+                "Rosihan Ariyuana",
+                "5B104"
+            ],
+            [
+                "19",
+                "2",
+                "7",
+                "13:55:00 - 14:45:00",
+                "Kewirausahaan ",
+                "02143222003",
+                "2",
+                "Rosihan Ariyuana",
+                "5B104"
+            ],
+            [
+                "20",
+                "2",
+                "8",
+                "15:30:00 - 16:20:00",
+                "Bimbingan dan Konseling ",
+                "02143222006",
+                "2",
+                "Elwas Berdha Krismona",
+                "5B104"
+            ],
+            [
+                "21",
+                "2",
+                "9",
+                "16:25:00 - 17:15:00",
+                "Bimbingan dan Konseling ",
+                "02143222006",
+                "2",
+                "Elwas Berdha Krismona",
+                "5B104"
+            ]
+        ],
+        "B": [
+            [
+                "1",
+                "0",
+                "1",
+                "07:30:00 - 08:20:00",
+                "Organisasi Sistem Komputer ",
+                "02143243041",
+                "3",
+                "Yudianto Sujana",
+                "5B105"
+            ],
+            [
+                "2",
+                "0",
+                "2",
+                "08:25:00 - 09:15:00",
+                "Organisasi Sistem Komputer ",
+                "02143243041",
+                "3",
+                "Yudianto Sujana",
+                "5B105"
+            ],
+            [
+                "3",
+                "0",
+                "3",
+                "09:20:00 - 10:10:00",
+                "Organisasi Sistem Komputer ",
+                "02143243041",
+                "3",
+                "Yudianto Sujana",
+                "5B105"
+            ],
+            [
+                "4",
+                "0",
+                "4",
+                "10:15:00 - 11:05:00",
+                "Statistik Terapan ",
+                "02143243039",
+                "3",
+                "Agus Efendi",
+                "5B105"
+            ],
+            [
+                "5",
+                "0",
+                "5",
+                "11:10:00 - 12:00:00",
+                "Statistik Terapan ",
+                "02143243039",
+                "3",
+                "Agus Efendi",
+                "5B105"
+            ],
+            [
+                "6",
+                "0",
+                "6",
+                "13:00:00 - 13:50:00",
+                "Statistik Terapan ",
+                "02143243039",
+                "3",
+                "Agus Efendi",
+                "5B105"
+            ],
+            [
+                "7",
+                "1",
+                "1",
+                "07:30:00 - 08:20:00",
+                "Teknik Animasi 3D ",
+                "02143243033",
+                "3",
+                "Yusfia Hafid Aristyagama",
+                "Lab Komputer PTIK 2"
+            ],
+            [
+                "8",
+                "1",
+                "2",
+                "08:25:00 - 09:15:00",
+                "Teknik Animasi 3D ",
+                "02143243033",
+                "3",
+                "Yusfia Hafid Aristyagama",
+                "Lab Komputer PTIK 2"
+            ],
+            [
+                "9",
+                "1",
+                "3",
+                "09:20:00 - 10:10:00",
+                "Teknik Animasi 3D ",
+                "02143243033",
+                "3",
+                "Yusfia Hafid Aristyagama",
+                "Lab Komputer PTIK 2"
+            ],
+            [
+                "10",
+                "1",
+                "5",
+                "11:10:00 - 12:00:00",
+                "Rekayasa Perangkat Lunak ",
+                "02143243040",
+                "3",
+                "Slamet Kurniawan Fahrurozi",
+                "5B108"
+            ],
+            [
+                "11",
+                "1",
+                "6",
+                "13:00:00 - 13:50:00",
+                "Rekayasa Perangkat Lunak ",
+                "02143243040",
+                "3",
+                "Slamet Kurniawan Fahrurozi",
+                "5B108"
+            ],
+            [
+                "12",
+                "1",
+                "7",
+                "13:55:00 - 14:45:00",
+                "Rekayasa Perangkat Lunak ",
+                "02143243040",
+                "3",
+                "Slamet Kurniawan Fahrurozi",
+                "5B108"
+            ],
+            [
+                "13",
+                "2",
+                "1",
+                "07:30:00 - 08:20:00",
+                "Perkembangan Peserta Didik ",
+                "02143232005",
+                "2",
+                "Dwi Maryono",
+                "5B105"
+            ],
+            [
+                "14",
+                "2",
+                "2",
+                "08:25:00 - 09:15:00",
+                "Perkembangan Peserta Didik ",
+                "02143232005",
+                "2",
+                "Dwi Maryono",
+                "5B105"
+            ],
+            [
+                "15",
+                "2",
+                "3",
+                "09:20:00 - 10:10:00",
+                "Kewirausahaan ",
+                "02143222003",
+                "2",
+                "Rosihan Ariyuana",
+                "5B105"
+            ],
+            [
+                "16",
+                "2",
+                "4",
+                "10:15:00 - 11:05:00",
+                "Kewirausahaan ",
+                "02143222003",
+                "2",
+                "Rosihan Ariyuana",
+                "5B105"
+            ],
+            [
+                "17",
+                "2",
+                "6",
+                "13:00:00 - 13:50:00",
+                "Bimbingan dan Konseling ",
+                "02143222006",
+                "2",
+                "Elwas Berdha Krismona",
+                "5B105"
+            ],
+            [
+                "18",
+                "2",
+                "7",
+                "13:55:00 - 14:45:00",
+                "Bimbingan dan Konseling ",
+                "02143222006",
+                "2",
+                "Elwas Berdha Krismona",
+                "5B105"
+            ],
+            [
+                "19",
+                "3",
+                "1",
+                "07:30:00 - 08:20:00",
+                "Jaringan Nirkabel ",
+                "02143243035",
+                "3",
+                "Vearen Dika Sofirudin",
+                "Lab Komputer PTIK"
+            ],
+            [
+                "20",
+                "3",
+                "2",
+                "08:25:00 - 09:15:00",
+                "Jaringan Nirkabel ",
+                "02143243035",
+                "3",
+                "Vearen Dika Sofirudin",
+                "Lab Komputer PTIK"
+            ],
+            [
+                "21",
+                "3",
+                "3",
+                "09:20:00 - 10:10:00",
+                "Jaringan Nirkabel ",
+                "02143243035",
+                "3",
+                "Vearen Dika Sofirudin",
+                "Lab Komputer PTIK"
+            ]
+        ]
+    }
+}
